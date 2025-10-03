@@ -38,23 +38,31 @@ nav {
   margin: 2rem 0;
 }
 
-nav button {
-  margin: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 20px;
-  background: rgba(59, 130, 246, 0.2);
-  color: #e0f2fe;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(6px);
+/* Reset list style */
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  gap: 0.5rem;
 }
 
-nav button:hover {
-  background: rgba(147, 197, 253, 0.4);
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #60a5fa;
+/* Style each li as button-like links */
+.nav-menu li a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #1e3a8a; /* deep blue */
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Hover effect */
+.nav-menu li a:hover {
+  background: #2563eb; /* lighter blue */
+  transform: translateY(-2px);
 }
 
 main {
