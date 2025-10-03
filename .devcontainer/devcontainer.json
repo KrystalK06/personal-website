@@ -1,0 +1,50 @@
+// Dev Container config for your "personal-website" repo
+{
+  "name": "personal-website",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+
+  // Features: you can add prebuilt configs like GitHub CLI or Docker-in-Docker
+  "features": {},
+
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "index.html"
+      ]
+    },
+    "vscode": {
+      "settings": {
+        "[css]": {
+          "editor.defaultFormatter": "vscode.css-language-features"
+        },
+        "[html]": {
+          "editor.defaultFormatter": "vscode.html-language-features"
+        },
+        "[javascript]": {
+          "editor.defaultFormatter": "vscode.typescript-language-features"
+        },
+        "editor.formatOnSave": true,
+        "editor.wordWrap": "on",
+        "workbench.activityBar.visible": true,
+        "workbench.tree.indent": 18,
+        "git.autofetch": true
+      },
+      "extensions": [
+        "ecmel.vscode-html-css",
+        "yzhang.markdown-all-in-one",
+        "davidanson.vscode-markdownlint",
+        "yandeu.five-server",              // lightweight live server
+        "kisstkondoros.vscode-gutter-preview",
+        "sndst00m.vscode-native-svg-preview"
+      ]
+    }
+  },
+
+  // Port forwarding: 5500 is for Five Server live preview
+  "forwardPorts": [5500],
+
+  // Run after container starts
+  "postStartCommand": "git config --global pull.rebase false"
+
+  // "remoteUser": "root" // Uncomment if you need root access
+}
