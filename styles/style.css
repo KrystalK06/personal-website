@@ -1,0 +1,87 @@
+/* Ethereal glowing, dreamy vibe */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #e0f2fe;
+  height: 100%;
+  overflow: hidden;
+  background: #0f172a; /* deep space navy */
+}
+
+canvas#stars {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 20px #38bdf8, 0 0 40px #6366f1;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #a5f3fc;
+  margin-top: 0.5rem;
+}
+
+nav {
+  margin: 2rem 0;
+}
+
+nav button {
+  margin: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 20px;
+  background: rgba(59, 130, 246, 0.2);
+  color: #e0f2fe;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+nav button:hover {
+  background: rgba(147, 197, 253, 0.4);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #60a5fa;
+}
+
+main {
+  max-width: 700px;
+  margin: auto;
+  padding: 1rem;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.3);
+}
+
+.tab {
+  display: none;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.tab.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #93c5fd;
+}

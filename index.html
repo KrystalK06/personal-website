@@ -3,47 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Personal Website</title>
+  <title>Ethereal Personal Website</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Hi, I’m Your Name 👋</h1>
-    <p>Welcome to my interactive personal website!</p>
-  </header>
+  <canvas id="stars"></canvas>
+  
+  <div class="content">
+    <header>
+      <h1>✨ Your Name ✨</h1>
+      <p class="tagline">Dreamer • Creator • Explorer</p>
+    </header>
 
-  <nav>
-    <button onclick="showTab('about')">About</button>
-    <button onclick="showTab('work')">Work</button>
-    <button onclick="showTab('contact')">Contact</button>
-    <button onclick="showTab('fun')">Fun</button>
-  </nav>
+    <nav>
+      <button onclick="showTab('about')">About</button>
+      <button onclick="showTab('work')">Work</button>
+      <button onclick="showTab('contact')">Contact</button>
+      <button onclick="showTab('fun')">Fun</button>
+    </nav>
 
-  <main>
-    <section id="about" class="tab active">
-      <h2>About Me</h2>
-      <p>I love building interactive websites and experimenting with design.</p>
-    </section>
+    <main>
+      <section id="about" class="tab active">
+        <h2>About Me</h2>
+        <p>I love creating magical, interactive spaces online that feel otherworldly ✨.</p>
+      </section>
 
-    <section id="work" class="tab">
-      <h2>My Work</h2>
-      <p>Project 1, Project 2, Project 3...</p>
-    </section>
+      <section id="work" class="tab">
+        <h2>My Work</h2>
+        <p>Projects, designs, and explorations from across dimensions 🌌.</p>
+      </section>
 
-    <section id="contact" class="tab">
-      <h2>Contact</h2>
-      <p>Email me at <a href="mailto:you@example.com">you@example.com</a></p>
-    </section>
+      <section id="contact" class="tab">
+        <h2>Contact</h2>
+        <p>Reach out: <a href="mailto:you@example.com">you@example.com</a></p>
+      </section>
 
-    <section id="fun" class="tab">
-      <h2>Fun Fact</h2>
-      <p>💡 Did you know dolphins have names for each other?</p>
-    </section>
-  </main>
+      <section id="fun" class="tab">
+        <h2>Fun Fact</h2>
+        <p>🌙 Did you know moonlight is actually just reflected sunlight? Still feels magical though!</p>
+      </section>
+    </main>
 
-  <footer>
-    <p>© 2025 Your Name — Built with 💙</p>
-  </footer>
+    <footer>
+      <p>© 2025 Your Name — Floating through the cosmos 💫</p>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
