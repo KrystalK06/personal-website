@@ -48,16 +48,28 @@ function animate() {
 }
 animate();
 
+// Create aura element
+const aura = document.createElement("div");
+aura.className = "cursor-aura";
+document.body.appendChild(aura);
+
+let mouseX = 0, mouseY = 0;
+let auraX = 0, auraY = 0;
+
 document.addEventListener("mousemove", (e) => {
-  const star = document.createElement("div");
-  star.className = "star";
-  star.style.left = `${e.pageX - 6}px`;  // center on cursor
-  star.style.top = `${e.pageY - 6}px`;
-
-  document.body.appendChild(star);
-
-  // Remove after animation ends
-  setTimeout(() => {
-    star.remove();
-  }, 800);
+  mouseX = e.pageX;
+  mouseY = e.pageY;
 });
+
+function animate() {
+  // Smooth interpolation (lerp)
+  auraX += (mouseX - auraX) * 0.15;
+  auraY += (mouseY - auraY) * 0.15;
+
+  aura.style.left = auraX + "px";
+  aura.style.top = auraY + "px";
+
+  requestAnimationFrame(animate);
+}
+animate();
+

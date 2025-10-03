@@ -2,7 +2,7 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Cantarell", sans-serif;
   color: #e0f2fe;
   height: 100%;
   overflow: hidden;
@@ -86,26 +86,18 @@ footer {
   color: #93c5fd;
 }
 
-/* Container for aura stars */
-.star {
+/* Glowing aura that follows the cursor */
+.cursor-aura {
   position: fixed;
-  pointer-events: none;
-  width: 12px;
-  height: 12px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(173,216,230,0.2) 70%, transparent 100%);
-  box-shadow: 0 0 15px rgba(173,216,230,0.8), 0 0 25px rgba(100,149,237,0.6);
-  animation: fadeOut 0.8s forwards;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(173,216,230,0.3) 70%, transparent 100%);
+  box-shadow: 0 0 30px rgba(135,206,250,0.8),
+              0 0 60px rgba(65,105,225,0.6),
+              0 0 90px rgba(30,144,255,0.4);
+  transform: translate(-50%, -50%);
   z-index: 9999;
-}
-
-@keyframes fadeOut {
-  from {
-    transform: scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: scale(2);
-    opacity: 0;
-  }
+  transition: transform 0.1s ease-out;
 }
