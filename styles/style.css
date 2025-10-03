@@ -39,7 +39,7 @@ nav {
 }
 
 /* Reset list style */
-.nav-menu {
+menu li {
   list-style: none;
   padding: 0;
   margin: 1rem 0;
@@ -48,7 +48,7 @@ nav {
 }
 
 /* Style each li as button-like links */
-.nav-menu li a {
+menu li a {
   display: inline-block;
   padding: 0.5rem 1rem;
   background: #1e3a8a; /* deep blue */
@@ -60,7 +60,7 @@ nav {
 }
 
 /* Hover effect */
-.nav-menu li a:hover {
+menu li a:hover {
   background: #2563eb; /* lighter blue */
   transform: translateY(-2px);
 }
