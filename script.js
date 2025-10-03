@@ -47,3 +47,17 @@ function animate() {
   requestAnimationFrame(animate);
 }
 animate();
+
+document.addEventListener("mousemove", (e) => {
+  const star = document.createElement("div");
+  star.className = "star";
+  star.style.left = `${e.pageX - 6}px`;  // center on cursor
+  star.style.top = `${e.pageY - 6}px`;
+
+  document.body.appendChild(star);
+
+  // Remove after animation ends
+  setTimeout(() => {
+    star.remove();
+  }, 800);
+});
